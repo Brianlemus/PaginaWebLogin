@@ -1,0 +1,37 @@
+.body {
+    font-family: arial, helvetica;
+    background: #1509b49f;
+}
+
+.menu{
+    list-style: nome;
+    padding: 0;
+    background: transparent;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    float: right;
+}
+
+/* .menu li {
+    background-image: url(img/IENPG.png);
+} */
+.menu li a {
+    text-decoration: none;
+    color:aliceblue;
+    padding: 20px;
+    display: block;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover{
+    background: #ef8354;
+}
+
+nav {
+  float: right;
+}

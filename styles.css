@@ -1,0 +1,85 @@
+body, html {
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(rgba(189, 180, 95, 0.8), rgba(234, 181, 35, 0.7)),url("img/pickerFondo.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.slider {
+    background-image: url(img/prueba1.jpg);
+    background-size: conver;
+    height: 50%;
+    width: 50%;
+    padding: 0;
+    border-radius: 10%;
+    animation: animate 10s infinite;
+}
+
+@keyframes animate {
+    12.5%{
+        background-image: url(img/prueba1.jpg);
+        background-size: cover;
+    }
+    12.5%{
+        background-image: url(img/prueba2.jpg);
+        background-size: cover;
+    }
+    12.5%{
+        background-image: url(img/prueba3.jpg);
+        background-size: cover;
+    }
+    12.5%{
+        background-image: url(img/prueba4.jpg);
+        background-size: cover;
+    }
+    12.5%{
+        background-image: url(img/prueba5.jpg);
+        background-size: cover;
+    }
+    12.5%{
+        background-image: url(img/prueba6.jpg);
+        background-size: cover;
+    }
+    12.5%{
+        background-image: url(img/prueba7.jpg);
+        background-size: cover;
+    }
+    12.5%{
+        background-image: url(img/prueba8.jpg);
+        background-size: cover;
+    }
+}
+
+.logo {
+    height: 70px;
+    margin-top: 30px;
+}
+
+.text-description {
+    letter-spacing: 2px;
+    font-family: sans-serif;
+}
+
+.form-control {
+    background: transparent !important;
+    color: #fff !important;
+}
+
+a .fab {
+    color: #ffc;
+    font-size: 30px;
+    margin: 0 10px;
+}
