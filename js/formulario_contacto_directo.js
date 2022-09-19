@@ -14,18 +14,36 @@ const campos = {
   telefono: false,
 };
 
+let nombre;
+let correo;
+let numero;
+let tema;
+let mensaje;
+
 const validarformulario = (e) => {
   switch (e.target.name) {
     case "name":
       validacionCampo(expresiones.name, e.target, e.target.name);
+      nombre = e.target.value;
       break;
     case "email":
       validacionCampo(expresiones.email, e.target, e.target.name);
+      correo = e.target.value;
       break;
     case "telefono":
       validacionCampo(expresiones.telefono, e.target, e.target.name);
+      numero = e.target.value;
+      break;
+    case "asunto":
+      tema = e.target.value;
+      break;
+    case "message":
+      mensaje = e.target.value;
       break;
   }
+
+  // validacionData(e.target.value, e.target.name);
+
 };
 
 inputs.forEach((input) => {
@@ -51,6 +69,7 @@ const validacionCampo = (expresion, input, campo) => {
       .querySelector(`#grupo__${campo} .formulario__input-error`)
       .classList.remove("formulario__input-error-activo");
     campos[campo] = true;
+    
   } else if (input.value == "") {
     document
       .getElementById(`grupo__${campo}`)
@@ -92,9 +111,18 @@ formulario.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (campos.name && campos.email && campos.telefono) {
-    swal("Excelente!", "Datos ingresados", "success");
+    window.location = "reporteContactoDirecto.php?nom=" + nombre + "&email=" + correo + "&numero=" + numero + "&asunto=" + tema + "&message=" + mensaje;
+    setTimeout(() => {
+			swal(
+        "Excelente!",
+        "Gracias por contactarnos un agente de servicio al cliente te contactara",
+        "success"
+      );
+		}, 5000 );
+    window.location.href = "index.html";
+
   } else {
-    // window.alert("Favor llenar correctamente el formulario");
     swal("Cuidado!", "Favor llenar correctamente el formulario", "error");
   }
+
 });
