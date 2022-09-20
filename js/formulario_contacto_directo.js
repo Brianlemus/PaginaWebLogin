@@ -112,14 +112,16 @@ formulario.addEventListener("submit", (e) => {
 
   if (campos.name && campos.email && campos.telefono) {
     window.location = "reporteContactoDirecto.php?nom=" + nombre + "&email=" + correo + "&numero=" + numero + "&asunto=" + tema + "&message=" + mensaje;
-    setTimeout(() => {
-			swal(
-        "Excelente!",
-        "Gracias por contactarnos un agente de servicio al cliente te contactara",
-        "success"
-      );
-		}, 5000 );
-    window.location.href = "index.html";
+    swal(
+      "Excelente!",
+      "Gracias por contactarnos un agente de servicio al cliente te contactara",
+      "success"
+    );
+
+    // setTimeout(() => {
+    //    window.location.href = "index.html";
+		// }, 5000 );
+   
 
   } else {
     swal("Cuidado!", "Favor llenar correctamente el formulario", "error");

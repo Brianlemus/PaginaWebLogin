@@ -1,0 +1,19 @@
+main > .container {
+    padding: 30px;
+}
+
+.menu{
+    padding: auto;
+    background: transparent;
+    max-width: 1000px;
+    margin: auto;
+    float: right;
+}
+
+.menu li a:hover{
+    background: #ef8354;
+}
+
+.menu ul {
+    float: right;
+}
