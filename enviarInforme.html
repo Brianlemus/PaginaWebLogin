@@ -5,72 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>enviarFormulario</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <title>Informe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-         <link rel="stylesheet" href="stylespp.css">
-         <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylespp.css">
+    <link rel="stylesheet" href="css/formularioReporte.css">
 </head>
+
 <body>
-    <header class="container">
-        <div class="row">
-            <div class="col-sm-12 my-4">
-                <ul class="menu">
-                    <img src="img/IENPG.png">
-                    <nav>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="materiales.html">Materiales Gratuitos</a></li>
-                    <li><a href="contactoDirecto.html">Contacto Directo</a></li>
-                    <li><a href="admin.html">Admin</a></li>
-                    </nav> <br>
-                </ul>
-                <h1 class="text-center display-7 text-uppercase font-weight-bold mt-4">Tienes alguna consulta? Contactacnos</h1>
-            </div>
-           <div class="container">
-            <form>
-                <div class="row g-3">
-                    <div class="col-md-4">
-                        <div class="form-floating">
-                            <input type="text" class="form-control bg-light rounded-0 text-center" name="name" placeholder="Your Name" /><br>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-floating">
-                            <input class="form-control bg-light rounded-0 text-center"  type="email" name="email" required
-                                    placeholder="Ingrese su correo"><br>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-floating">
-                            <input class="form-control bg-light rounded-0 text-center"  type="number" name="telefono" required
-                                    placeholder="Ingrese su numero telefonico"><br>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="col-12">
-                        <div class="form-floating">
-                            <input type="text" class="form-control bg-light rounded-0 text-center"   name="asunto" required placeholder="Ingrese su asunto"><br>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-floating">
-                            <textarea class="form-control bg-light rounded-0 text-center" placeholder="Leave a message here" name="message"
-                                style="height: 100px"></textarea><br>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button class="btn btn-primary w-100 py-3" type="submit">
-                            Enviar Mensaje
-                        </button>
-                    </div>
-                </div>
-            </form>
-            </div>
+    <header>
+        <div class="col-sm-12 my-4">
+            <img src="img/IENPG.png">
+            <ul class="menu">
+                <nav>
+                    <li><a href="index.html">Cerrar Session</a></li>
+                </nav> <br>
+            </ul>
+            <h1 class="text-center display-7 text-uppercase font-weight-bold mt-4">Gracias por enviar tu formulario.
+            </h1>
+            <h1 class="text-center display-7 text-uppercase font-weight-bold mt-4">los administradores lo estaremos revisando.
+            </h1>
         </div>
     </header>
+    <main class="container">
+        <form action="php/cargarFormulario.php" class="form-register" method="post" enctype="multipart/form-data">
+            <h1 class="form__title">Introducir Informe</h1>
+            <div class="container--flex">
+                <label for="" class="form__label">Nombre Iglesia</label>
+                <input type="text" class="form__input" id="nombreIglesia" name="nombreIglesia" required>
+            </div>
+            <div class="container--flex">
+                <label for="" class="form__label">Direccion Iglesia</label>
+                <input type="text" class="form__input" id="direccion" name="direccion" required>
+            </div>
+             <div class="container--flex">
+                <label for="" class="form__label">Pastor Iglesia</label>
+                <input type="text" class="form__input" id="pastorIglesia" name="pastorIglesia" required>
+            </div>
+            <div class="container--flex">
+                <label for="" class="form__label">fecha</label>
+                <input type="date" class="form__input" id="fecha" name="fecha" required>
+            </div>
+            <input type="file" id="archivo" name="archivo" required>
+            <input type="submit" class="form__submit">
+        </form>
+    </main>
 </body>
-
 </html>

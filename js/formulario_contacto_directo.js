@@ -111,16 +111,14 @@ formulario.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (campos.name && campos.email && campos.telefono) {
-    window.location = "reporteContactoDirecto.php?nom=" + nombre + "&email=" + correo + "&numero=" + numero + "&asunto=" + tema + "&message=" + mensaje;
     swal(
       "Excelente!",
       "Gracias por contactarnos un agente de servicio al cliente te contactara",
       "success"
     );
-
-    // setTimeout(() => {
-    //    window.location.href = "index.html";
-		// }, 5000 );
+    setTimeout(() => {
+       window.location = "reporteContactoDirecto.php?nom=" + nombre + "&email=" + correo + "&numero=" + numero + "&asunto=" + tema + "&message=" + mensaje;
+    }, 5000 );
    
 
   } else {
