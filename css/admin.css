@@ -1,0 +1,45 @@
+.form__submit {
+    width: 100%;
+    background: #3e2e6f;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.form-register{
+    width: 95%;
+    max-width: 500px;
+    background: transparent;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.form__espacio{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    margin-top: 30;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+    text-align: center;
+
+}
+.color{
+    background-color: #3e2e6f;
+}
+
+.body{
+    color: #fff;
+}
+
+.color1{
+    background-color: #fff;
+}
+
+.title2{
+    text-align:center;
+    background-color: blue;
+
+}

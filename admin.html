@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/admin.css">
 </head>
+
 <body>
-    <div class="container">
-        <button>Reportes Contacto</button>
-        <button>Reportes Informes</button>
-        <button>Reportes Usuarios Creados</button>
-        <button>Crear Usuarios</button>
+    <div class="container form-register" id="todosBotones">
+        <div class="card color tamaño">
+            <div class="card-body">
+                <h5 class="card-title ">BIENVENIDO AL MENU DE ADMINISTRADOR</h5>
+                <h5 class="card-title title2">Isaías 40:28-31</h5>
+                <p class="card-text">
+                    Él fortalece al que está fatigado y acrecienta la fuerza del que no tiene
+                    vigor. Los jóvenes se fatigan y se agotan, los muchachos tropiezan y caen. Pero los que esperan
+                    en el Señor renuevan sus fuerzas, despliegan alas como las águilas; corren y no se agotan,
+                    avanzan y no se fatigan
+                </p>
+            </div>
+            <img src="img/bg.jpg" class="card-img-top" alt="...">
+        </div><br>
+        <div class="form__espacio">
+            <button type="button" class="btn btn-outline-primary form__submit" name="reporteInformes" id="reporteInformes" onclick="reporteInformes()">Reportes Informes</button>
+        </div>
+        <div class="form__espacio">
+            <button type="button" class="btn btn-outline-info form__submit" name="reporteContacto" id="reporteContacto" onclick="reporteContacto()">Reportes Contacto Directo</button>
+        </div>
+        <div class="form__espacio">
+            <button type="button" class="btn btn-outline-dark form__submit" name="listaUsuarios" id="listaUsuarios" onclick="listaUsuarios()">Lista Usuarios Sistemas</button>
+        </div>
+        <div class="form__espacio">
+            <button type="button" class="btn btn-outline-success form__submit" name="crearusuario" id="crearUsuario" onclick="crearUsuario()">Crear Usuario</button>
+        </div>
 
     </div>
+    <script src="js/admin.js"></script>
 </body>
+
 </html>

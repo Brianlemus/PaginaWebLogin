@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(rgba(189, 180, 95, 0.8), rgba(234, 181, 35, 0.7)),url("../img/pickerFondo.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.form__submit {
+    width: 100%;
+    background: #3e2e6f;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.form__espacio{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-block: 20px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.block__inputs{
+    display: flexbox;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 20%;
+    border: none;
+    width: 60%;
+    left: 10%;
+    align-items: center;
+    align-content: center;
+    
+    
+}
+
+.input_personalice{
+    text-align: center;
+}
