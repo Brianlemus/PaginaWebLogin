@@ -6,11 +6,26 @@ $_SESSION["passwordLogin"];
 
 include_once('../conSystemDb.php');
 
-$correoLogin = $_SESSION["emailLogin"];
+$correoLogin    = $_SESSION["emailLogin"];
 $nombre_iglesia = $_POST["nombreIglesia"];
 $direccion      = $_POST["direccion"];
 $pastor_iglesia = $_POST["pastorIglesia"];
 $fecha          = $_POST["fecha"];
+
+if ($correoLogin == null || $correoLogin == '') {
+    echo "<script> alert('No ha iniciado session revisar'); window.location='./../index.html'</script>";
+    return;
+}
+
+if($nombre_iglesia == null && $direccion == null && $pastor_iglesia == null && $fecha == null){
+    echo "<script> alert('Porfavor llene todos los campos del formulario'); window.location='./../enviarInforme.html'</script>";
+    return;
+}
+
+if($nombre_iglesia == '' && $direccion == '' && $pastor_iglesia == '' && $fecha == ''){
+    echo "<script> alert('Porfavor llene todos los campos del formulario'); window.location='./../enviarInforme.html'</script>";
+    return;
+}
 
 
 if ($_FILES["archivo"]) {
@@ -25,11 +40,13 @@ if ($_FILES["archivo"]) {
         if($resultado){
             echo "<script> alert('se ha cargado correctamente el formulario'); window.location='./../enviarInforme.html'</script>";
         }else { 
-            printf("Errormessage: %s\n", mysqli_error($con));
+            echo "<script> alert('Su formulario no se pudo cargar.'); window.location='./../enviarInforme.html'</script>";
+
         }
     }
 }else{
-    echo "Error al subir archivo";
+    echo "<script> alert('Su formulario no se pudo cargar.'); window.location='./../enviarInforme.html'</script>";
+
 }
 
 ?>

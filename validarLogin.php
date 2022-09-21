@@ -16,6 +16,7 @@ while ($result = mysqli_fetch_array($queryVerificacion)) {
    $idveri      = $result["id"];
    $correoVeri  = $result["correo"];
    $claveVeri   = $result["clave"];
+   $identificador = $result["identificador"];
 }
 
 if(!$row_cnt == 0){
@@ -23,13 +24,30 @@ if(!$row_cnt == 0){
     if ($claveVeri != $clave) {
        echo json_encode('Contraseña Incorrecta');
     }else{
-        echo json_encode('correct');
         
-        $_SESSION["emailLogin"]    = $email;
-        $_SESSION["passwordLogin"] = $clave;
 
+        switch ($identificador) {
+            case 'USUARIO':
+                
+                echo json_encode('correct');
+                $_SESSION["emailLogin"]    = $email;
+                $_SESSION["passwordLogin"] = $clave;
+                break;
 
+            case 'ADMIN':
+
+                echo json_encode('ADMIN');
+                $_SESSION["emailLogin"]    = $email;
+                $_SESSION["passwordLogin"] = $clave;
+                break;  
+
+            default:
+               echo json_encode('Este usuario no tiene configuracion de identificador contactar a soporte.');
+                break;
+
+        }
     }
+    
 }else {
     echo json_encode('Correo electronico no registrado.');
 }

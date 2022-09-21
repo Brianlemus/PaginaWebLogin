@@ -28,8 +28,10 @@ function enviar() {
     .then(data => {
         if (data === "correct") {
             window.location = "enviarInforme.html";
-        }else{
-            swal(data);
+        }else if (data === "ADMIN") {
+          window.location = "admin.html";
+        } else {
+          swal(data);
         }
     })
 
