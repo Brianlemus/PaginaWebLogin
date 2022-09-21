@@ -1,8 +1,13 @@
 <?php
+session_start();
+
 include_once('./conSystemDb.php');
 // recibo los datos del formulario
+
+
 $email = $_POST['email'];
 $clave = $_POST['clave'];
+
 
 $consulVerificacion = "SELECT * FROM ienpg.usuarios where correo = '".$email."';";
 $queryVerificacion = mysqli_query($con,$consulVerificacion);
@@ -19,6 +24,11 @@ if(!$row_cnt == 0){
        echo json_encode('Contraseña Incorrecta');
     }else{
         echo json_encode('correct');
+        
+        $_SESSION["emailLogin"]    = $email;
+        $_SESSION["passwordLogin"] = $clave;
+
+
     }
 }else {
     echo json_encode('Correo electronico no registrado.');
