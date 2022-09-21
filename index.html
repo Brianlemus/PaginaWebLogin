@@ -15,6 +15,7 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="stylespp.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
 </head>
 
@@ -42,16 +43,17 @@
             <div class="col-sm-6 text-center">
                 <p class="text-center text-description">Filipense 4:13 Todo lo puedo en Cristo que me fortalece</p>
                 <p class="text-center text-description">"Atreve a caminar en que sea descalzo, a sonreir aunque no tengas motivos, a ayudar a otros sin recivir aplausos"</p>
-                <form action="validarLogin.php" method="post" id="login_usuario">
+                <div  id="login_usuario">
+                    <!-- action="validarLogin.php" method="post" -->
                     <h1 class="text-center text-uppercase "> Ingrese Session</h1>
-                    <input class="form-control rounded-0 my-4 text-center"  type="email" name="email" required
+                    <input class="form-control rounded-0 my-4 text-center"  type="email" id="email" name="email" required
                         placeholder="Ingrese su correo">
-                    <input class="form-control rounded-0 my-4 text-center" type="password" name="clave" required
+                    <input class="form-control rounded-0 my-4 text-center" type="password" id="clave" name="clave" required
                         placeholder="Ingrese su contraseña">
-                    <button type="submit" class="btn btn-light btn-outline rounded-0">
+                    <button class="btn btn-light btn-outline rounded-0" onclick="enviar()">
                         INGRESAR
                     </button>
-                </form>
+                </div>
                 <ul class="list-unstyled list-inline mt-4">
                     <li class="list-inline-item">
                         <a href="">
@@ -126,7 +128,10 @@
         </div>
         </section>
     </header>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/login.js"></script>
 </body>
 
 </html>

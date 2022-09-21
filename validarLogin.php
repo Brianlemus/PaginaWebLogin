@@ -16,21 +16,13 @@ while ($result = mysqli_fetch_array($queryVerificacion)) {
 if(!$row_cnt == 0){
     
     if ($claveVeri != $clave) {
-        header("Location: index.html");
-        return;
+       echo json_encode('Contraseña Incorrecta');
+    }else{
+        echo json_encode('correct');
     }
-
-    header("Location: enviarInforme.html");
-
 }else {
-    // header("Location : ./../index.html");
-
-    echo "Usuario no registrado favor comunicarse con atencion al cliente";
+    echo json_encode('Correo electronico no registrado.');
 }
-
- 
 mysqli_close($con);
-
-
 
 ?>
