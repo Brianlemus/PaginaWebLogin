@@ -1,5 +1,5 @@
 const reporteInformes = () => {
-  console.log("puche1");
+  window.location="php/reporteInforme.php";
 };
 
 const reporteContacto = () => {
