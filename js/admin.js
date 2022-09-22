@@ -3,11 +3,11 @@ const reporteInformes = () => {
 };
 
 const reporteContacto = () => {
-  console.log("puche2");
+  console.log("php/reporteUsuarios.php");
 };
 
 const listaUsuarios = () => {
-  console.log("puche3");
+  window.location="php/reporteUsuarios.php";
 };
 
 const crearUsuario = () => {
