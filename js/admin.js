@@ -11,6 +11,6 @@ const listaUsuarios = () => {
 };
 
 const crearUsuario = () => {
-  window.location="./php/crearUsuario.php";
+  window.location="./creacionUsuario.html";
 };
 
