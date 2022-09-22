@@ -3,7 +3,7 @@ const reporteInformes = () => {
 };
 
 const reporteContacto = () => {
-  console.log("php/reporteUsuarios.php");
+  window.location="php/reporteContactoDirecto.php";  
 };
 
 const listaUsuarios = () => {
